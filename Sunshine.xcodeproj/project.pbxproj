@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		417B7FDF97C86A02734EB6D5 /* Pods_Sunshine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187C4852586F2C2B11292AF6 /* Pods_Sunshine.framework */; };
 		7416AD3D2C96029E00BC6F1A /* SunshineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416AD3C2C96029E00BC6F1A /* SunshineApp.swift */; };
 		7416AD3F2C96029E00BC6F1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416AD3E2C96029E00BC6F1A /* ContentView.swift */; };
 		7416AD412C96029F00BC6F1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7416AD402C96029F00BC6F1A /* Assets.xcassets */; };
@@ -14,6 +15,10 @@
 		7416AD4E2C9602A000BC6F1A /* SunshineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416AD4D2C9602A000BC6F1A /* SunshineTests.swift */; };
 		7416AD582C9602A000BC6F1A /* SunshineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416AD572C9602A000BC6F1A /* SunshineUITests.swift */; };
 		7416AD5A2C9602A000BC6F1A /* SunshineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416AD592C9602A000BC6F1A /* SunshineUITestsLaunchTests.swift */; };
+		7416AD672C9607C200BC6F1A /* SMBSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416AD662C9607C200BC6F1A /* SMBSettingsView.swift */; };
+		74D056812C96DD6E00CCEE97 /* SharedTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D056802C96DD6E00CCEE97 /* SharedTypes.swift */; };
+		74D056862C96DFEF00CCEE97 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D056832C96DFEF00CCEE97 /* VideoPlayerView.swift */; };
+		74D056C72C9711F200CCEE97 /* TVVLCKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D056C62C9711F200CCEE97 /* TVVLCKit.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		187C4852586F2C2B11292AF6 /* Pods_Sunshine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sunshine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36390599B7080C0BEF5DABAE /* Pods-Sunshine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunshine.release.xcconfig"; path = "Target Support Files/Pods-Sunshine/Pods-Sunshine.release.xcconfig"; sourceTree = "<group>"; };
 		7416AD392C96029E00BC6F1A /* Sunshine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunshine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7416AD3C2C96029E00BC6F1A /* SunshineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunshineApp.swift; sourceTree = "<group>"; };
 		7416AD3E2C96029E00BC6F1A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +51,12 @@
 		7416AD532C9602A000BC6F1A /* SunshineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunshineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7416AD572C9602A000BC6F1A /* SunshineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunshineUITests.swift; sourceTree = "<group>"; };
 		7416AD592C9602A000BC6F1A /* SunshineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunshineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7416AD662C9607C200BC6F1A /* SMBSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMBSettingsView.swift; sourceTree = "<group>"; };
+		74D056802C96DD6E00CCEE97 /* SharedTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedTypes.swift; sourceTree = "<group>"; };
+		74D056832C96DFEF00CCEE97 /* VideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		74D056C62C9711F200CCEE97 /* TVVLCKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TVVLCKit.xcframework; path = Pods/TVVLCKit/TVVLCKit.xcframework; sourceTree = "<group>"; };
+		74F11A8B2C96C2B500F36B76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DDD587490D497A70984B6798 /* Pods-Sunshine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunshine.debug.xcconfig"; path = "Target Support Files/Pods-Sunshine/Pods-Sunshine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74D056C72C9711F200CCEE97 /* TVVLCKit.xcframework in Frameworks */,
+				417B7FDF97C86A02734EB6D5 /* Pods_Sunshine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +93,8 @@
 				7416AD4C2C9602A000BC6F1A /* SunshineTests */,
 				7416AD562C9602A000BC6F1A /* SunshineUITests */,
 				7416AD3A2C96029E00BC6F1A /* Products */,
+				8531AC4D3649EF1F4656997A /* Pods */,
+				ECE2766C4F5C03CFD2AFD472 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +111,10 @@
 		7416AD3B2C96029E00BC6F1A /* Sunshine */ = {
 			isa = PBXGroup;
 			children = (
+				74D056832C96DFEF00CCEE97 /* VideoPlayerView.swift */,
+				74D056802C96DD6E00CCEE97 /* SharedTypes.swift */,
+				74F11A8B2C96C2B500F36B76 /* Info.plist */,
+				7416AD662C9607C200BC6F1A /* SMBSettingsView.swift */,
 				7416AD3C2C96029E00BC6F1A /* SunshineApp.swift */,
 				7416AD3E2C96029E00BC6F1A /* ContentView.swift */,
 				7416AD402C96029F00BC6F1A /* Assets.xcassets */,
@@ -127,6 +148,24 @@
 			path = SunshineUITests;
 			sourceTree = "<group>";
 		};
+		8531AC4D3649EF1F4656997A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDD587490D497A70984B6798 /* Pods-Sunshine.debug.xcconfig */,
+				36390599B7080C0BEF5DABAE /* Pods-Sunshine.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ECE2766C4F5C03CFD2AFD472 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74D056C62C9711F200CCEE97 /* TVVLCKit.xcframework */,
+				187C4852586F2C2B11292AF6 /* Pods_Sunshine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7416AD5D2C9602A000BC6F1A /* Build configuration list for PBXNativeTarget "Sunshine" */;
 			buildPhases = (
+				8A4B95CF7495A8330D9D11C7 /* [CP] Check Pods Manifest.lock */,
 				7416AD352C96029E00BC6F1A /* Sources */,
 				7416AD362C96029E00BC6F1A /* Frameworks */,
 				7416AD372C96029E00BC6F1A /* Resources */,
+				10C16502FE74B8D5AA71F24C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,13 +293,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10C16502FE74B8D5AA71F24C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sunshine/Pods-Sunshine-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sunshine/Pods-Sunshine-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sunshine/Pods-Sunshine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A4B95CF7495A8330D9D11C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sunshine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7416AD352C96029E00BC6F1A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74D056812C96DD6E00CCEE97 /* SharedTypes.swift in Sources */,
 				7416AD3F2C96029E00BC6F1A /* ContentView.swift in Sources */,
+				7416AD672C9607C200BC6F1A /* SMBSettingsView.swift in Sources */,
 				7416AD3D2C96029E00BC6F1A /* SunshineApp.swift in Sources */,
+				74D056862C96DFEF00CCEE97 /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +418,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -395,7 +481,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -416,6 +502,7 @@
 		};
 		7416AD5E2C9602A000BC6F1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDD587490D497A70984B6798 /* Pods-Sunshine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -425,6 +512,7 @@
 				DEVELOPMENT_TEAM = X6WCGAURHD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sunshine/Info.plist;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -442,6 +530,7 @@
 		};
 		7416AD5F2C9602A000BC6F1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36390599B7080C0BEF5DABAE /* Pods-Sunshine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -451,6 +540,7 @@
 				DEVELOPMENT_TEAM = X6WCGAURHD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sunshine/Info.plist;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
