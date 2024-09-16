@@ -19,6 +19,9 @@
 		74D056812C96DD6E00CCEE97 /* SharedTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D056802C96DD6E00CCEE97 /* SharedTypes.swift */; };
 		74D056862C96DFEF00CCEE97 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D056832C96DFEF00CCEE97 /* VideoPlayerView.swift */; };
 		74D056C72C9711F200CCEE97 /* TVVLCKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D056C62C9711F200CCEE97 /* TVVLCKit.xcframework */; };
+		74D056C92C97F8CB00CCEE97 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D056C82C97F8CB00CCEE97 /* MainTabView.swift */; };
+		74D056CB2C97F90400CCEE97 /* RecentlyWatchedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D056CA2C97F90400CCEE97 /* RecentlyWatchedView.swift */; };
+		74D056CD2C97F92900CCEE97 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D056CC2C97F92900CCEE97 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		74D056802C96DD6E00CCEE97 /* SharedTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedTypes.swift; sourceTree = "<group>"; };
 		74D056832C96DFEF00CCEE97 /* VideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		74D056C62C9711F200CCEE97 /* TVVLCKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TVVLCKit.xcframework; path = Pods/TVVLCKit/TVVLCKit.xcframework; sourceTree = "<group>"; };
+		74D056C82C97F8CB00CCEE97 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		74D056CA2C97F90400CCEE97 /* RecentlyWatchedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyWatchedView.swift; sourceTree = "<group>"; };
+		74D056CC2C97F92900CCEE97 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		74F11A8B2C96C2B500F36B76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DDD587490D497A70984B6798 /* Pods-Sunshine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunshine.debug.xcconfig"; path = "Target Support Files/Pods-Sunshine/Pods-Sunshine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +125,9 @@
 				7416AD3E2C96029E00BC6F1A /* ContentView.swift */,
 				7416AD402C96029F00BC6F1A /* Assets.xcassets */,
 				7416AD422C96029F00BC6F1A /* Preview Content */,
+				74D056C82C97F8CB00CCEE97 /* MainTabView.swift */,
+				74D056CA2C97F90400CCEE97 /* RecentlyWatchedView.swift */,
+				74D056CC2C97F92900CCEE97 /* SettingsView.swift */,
 			);
 			path = Sunshine;
 			sourceTree = "<group>";
@@ -341,10 +350,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				74D056812C96DD6E00CCEE97 /* SharedTypes.swift in Sources */,
+				74D056CD2C97F92900CCEE97 /* SettingsView.swift in Sources */,
 				7416AD3F2C96029E00BC6F1A /* ContentView.swift in Sources */,
 				7416AD672C9607C200BC6F1A /* SMBSettingsView.swift in Sources */,
 				7416AD3D2C96029E00BC6F1A /* SunshineApp.swift in Sources */,
+				74D056CB2C97F90400CCEE97 /* RecentlyWatchedView.swift in Sources */,
 				74D056862C96DFEF00CCEE97 /* VideoPlayerView.swift in Sources */,
+				74D056C92C97F8CB00CCEE97 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

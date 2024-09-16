@@ -11,47 +11,93 @@ import AMSMB2
 
 struct ContentView: View {
     @StateObject private var viewModel = ContentViewModel()
-    @State private var showingSMBSettings = false
     @State private var selectedVideo: FileItem?
+    @State private var isShowingVideoPlayer = false
+    @FocusState private var focusedItem: String?
+    let focusTab: () -> Void
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.items) { item in
-                    Button(action: {
-                        if item.isDirectory {
-                            viewModel.loadDirectory(path: item.path)
-                        } else {
-                            selectedVideo = item
+            VStack {
+                List {
+                    if viewModel.currentPath != "/" {
+                        Button(action: viewModel.navigateUp) {
+                            HStack {
+                                Image(systemName: "arrow.up.circle.fill")
+                                    .foregroundColor(.blue)
+                                Text("返回上级")
+                                    .foregroundColor(.primary)
+                            }
                         }
-                    }) {
-                        HStack {
-                            Image(systemName: item.isDirectory ? "folder" : "film")
-                            Text(item.name)
+                        .listRowBackground(focusedItem == "back" ? Color.secondary.opacity(0.3) : Color.clear)
+                        .focused($focusedItem, equals: "back")
+                    }
+                    
+                    ForEach(viewModel.items) { item in
+                        Button(action: {
+                            if item.isDirectory {
+                                viewModel.loadDirectory(path: item.path)
+                            } else {
+                                selectedVideo = item
+                                isShowingVideoPlayer = true
+                            }
+                        }) {
+                            HStack {
+                                Image(systemName: item.isDirectory ? "folder.fill" : "film.fill")
+                                    .foregroundColor(item.isDirectory ? .blue : .gray)
+                                Text(item.name)
+                                    .foregroundColor(.primary)
+                            }
                         }
+                        .listRowBackground(focusedItem == item.id.uuidString ? Color.secondary.opacity(0.3) : Color.clear)
+                        .focused($focusedItem, equals: item.id.uuidString)
                     }
                 }
+                .listStyle(PlainListStyle())
             }
-            .navigationTitle(viewModel.currentPath == "/" ? "根目录" : viewModel.currentPath)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { showingSMBSettings = true }) {
-                        Image(systemName: "gear")
-                    }
-                }
-            }
-            .sheet(isPresented: $showingSMBSettings) {
-                SMBSettingsView(isPresented: $showingSMBSettings, settings: $viewModel.settings, testConnection: viewModel.testConnection)
-            }
-            .fullScreenCover(item: $selectedVideo) { item in
-                VideoPlayerView(videoURL: viewModel.getVideoURL(for: item))
-            }
-            .task {
+            .padding(.top, 50) // 添加一些顶部填充以补偿移除的标题
+        }
+        .onAppear {
+            Task {
                 await viewModel.connectAndLoadDirectory()
             }
-            .alert(item: $viewModel.errorWrapper) { wrapper in
-                Alert(title: Text("错误"), message: Text(wrapper.error), dismissButton: .default(Text("确定")))
+        }
+        .alert(item: $viewModel.errorWrapper) { wrapper in
+            Alert(title: Text("错误"), message: Text(wrapper.error), dismissButton: .default(Text("确定")))
+        }
+        .fullScreenCover(isPresented: $isShowingVideoPlayer) {
+            if let video = selectedVideo {
+                VideoPlayerView(videoURL: viewModel.getVideoURL(for: video)).edgesIgnoringSafeArea(.all)
             }
+        }
+        .onMoveCommand { direction in
+            switch direction {
+            case .up, .down:
+                // 默认的上下移动会自动处理焦点
+                break
+            case .left:
+                handleBackNavigation()
+            case .right:
+                // 右移动可以用于进入选中的目录
+                if let focusedId = focusedItem,
+                   let focusedItem = viewModel.items.first(where: { $0.id.uuidString == focusedId }),
+                   focusedItem.isDirectory {
+                    viewModel.loadDirectory(path: focusedItem.path)
+                }
+            @unknown default:
+                break
+            }
+        }
+        .onExitCommand {
+            handleBackNavigation()
+        }
+    }
+    
+    private func handleBackNavigation() {
+        if viewModel.currentPath != "/" {
+            viewModel.navigateUp()
+        } else {
+            focusTab()
         }
     }
 }
@@ -180,8 +226,4 @@ class ContentViewModel: ObservableObject {
             }
         }
     }
-}
-
-#Preview {
-    ContentView()
 }
